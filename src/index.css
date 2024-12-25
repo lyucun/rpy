@@ -1,3 +1,17 @@
+
+
+
+
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +19,42 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  background-color: #333333;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* 自适应居中对齐 */
+}
+
+.item {
+  flex: 1 1 300px; /* 基础宽度为 300px，且允许放大和缩小 */
+  margin: 10px;
+}
+
+@media (max-width: 600px) {
+  body {
+      font-size: 14px; /* 更小的字体 */
+  }
+}
+
+/* 针对中等设备的样式 */
+@media (min-width: 601px) and (max-width: 1200px) {
+  body {
+      font-size: 16px; /* 中等字体 */
+  }
+}
+
+/* 针对大设备的样式 */
+@media (min-width: 1201px) {
+  body {
+      font-size: 18px; /* 更大的字体 */
+  }
 }

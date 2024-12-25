@@ -1,21 +1,29 @@
 import React from 'react';
-import './Header.css'; // 可以根据需要添加样式
+import './style/HeaderStyle.css'; // 根据需要添加样式
+import logo from '../static/logo.svg';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <header className="header">
-            <div className="logo">
-                <h1>我的网站</h1>
+        <div style={{ backgroundColor: 'black', padding: '5px' }}>
+            <div className="container">
+                <div className="logo-container">
+                    <img src={logo} alt="logo" className="logo" />
+                </div>
+                <div className='hlink-area'>
+                    <div className='hlink-div'>
+                        <Link to="/" className='hlink'>首页</Link>
+                    </div>
+                    <div className='hlink-div'>
+                        <Link to="/" className='hlink'>G8</Link>
+                    </div>
+                    <div className='hlink-div'>
+                        <Link to="/" className='hlink'>G8</Link>
+                    </div>
+                </div>
+
             </div>
-            <nav className="navbar">
-                <ul>
-                    <li><a href="/">首页</a></li>
-                    <li><a href="/about">关于我们</a></li>
-                    <li><a href="/services">服务</a></li>
-                    <li><a href="/contact">联系我们</a></li>
-                </ul>
-            </nav>
-        </header>
+        </div>
     );
 }
 

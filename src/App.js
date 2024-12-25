@@ -1,11 +1,16 @@
-
 import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom';
 import React from 'react';
-import routes from './BaseView/Router';
-function AppLayout() {
+import routes from './BaseView/Router'; // 你的路由配置
+import Header from './BaseView/Header';
+import Footer from './BaseView/Footer';
 
-  return (    
-    <Outlet />
+function AppLayout() {
+  return (
+    <div>
+      <Header /> 
+      <Outlet />
+      <Footer /> 
+    </div>
   );
 }
 
