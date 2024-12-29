@@ -1,11 +1,12 @@
 
 import React from 'react';
-
+import { Layout } from 'antd';
 function Footer() {
+    const { Footer } = Layout;
     return (
-        <div className='container'>
-            <p>footer</p>
-        </div>
+        <Footer style={{ textAlign: 'center' }}>
+            Ant Design ©{new Date().getFullYear()} Created by Ant UED
+        </Footer>
     );
 }
 

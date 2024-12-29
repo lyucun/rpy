@@ -1,0 +1,37 @@
+.left-body {
+    background-color: #ffffff;
+    width: 200px; /* 初始宽度 */
+    transition: width 0.2s ease-in-out;
+}
+
+
+.left-body-width {
+    width: 200px !important; /* 确保优先级 */
+    transition: width 0.2s ease-in-out;
+}
+
+.left-body-hidden {
+    width: 50px !important; /* 确保优先级 */
+    transition: width 0.2s ease-in-out;
+}
+
+.left-body-content {
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}
+
+.left-body-hidden + .left-body-content {
+    opacity: 0;
+    visibility: hidden;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    border: none;
+    padding: 10px;
+    transition: all 0.2s ease-in-out; /* 添加过渡效果 */
+}
