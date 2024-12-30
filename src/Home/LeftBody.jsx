@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { LaptopOutlined, UserOutlined } from '@ant-design/icons';
 import { Layout, Menu, theme } from 'antd';
 import Pipeline from '../Project/PipleLine';
-
+import Server from '../Home/Server';
 const { Content, Sider } = Layout;
 
 // 定义菜单项
@@ -10,7 +10,7 @@ const items2 = [
     {
         key: '1', // 唯一标识
         icon: <UserOutlined />, // 直接使用 JSX 图标
-        label: '服务器', // 菜单项名称
+        label: '总览', // 菜单项名称
     },
     {
         key: '2',
@@ -54,7 +54,7 @@ const MainBody = () => {
 
         switch (selectedKey) {
             case '1':
-                return <div>服务器配置内容</div>; // 渲染服务器配置组件
+                return <Server />; // 渲染服务器配置组件
             case '3':
                 return <div>subnav 3 组件</div>; // 渲染 subnav 3 组件
             default:

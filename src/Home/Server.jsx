@@ -1,10 +1,6 @@
 import React from 'react';
 
 import { Button, Card, Space } from 'antd'; // 引入 Ant Design 的 Card、Space 和 Button 组件
-import BaseConfigCard from './BaseConfigCard';
-import SqlConfigCard from './SqlConfigCard';
-import XssConfigCard from './XssConfigCard';
-
 
 const cardStyle = {
     borderRadius: '8px', // 圆角
@@ -17,14 +13,13 @@ const containerStyle = {
     padding: '24px', // 内边距
     background: '#f0f2f5', // 背景色
 };
-
-function Pipeline() {
+function Server() {
     return (
         <div style={containerStyle}>
             <Space direction="vertical" size="middle" style={{ width: '100%' }}>
                 {/* 基础配置模块 */}
                 <Card
-                    title="项目配置"
+                    title="总服务器配置"
                     style={{
                         ...cardStyle,
                         height: 'auto', // 隐藏时高度为 48px
@@ -41,13 +36,11 @@ function Pipeline() {
                         </Space>
                     }
                 >
-                    <BaseConfigCard/>
-                    <SqlConfigCard />
-                    <XssConfigCard />
+
                 </Card>
             </Space>
         </div>
     );
 }
 
-export default Pipeline;
+export default Server;
